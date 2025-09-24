@@ -13,8 +13,7 @@ TARGET = main.c
 OUT_LINUX = ./build/linux/spin
 OUT_WINDOWS = ./build/windows/spin.exe
 
-all: 
-	linux windows
+all: linux windows 
 
 linux:
 	$(CC_LINUX) $(TARGET) $(FLAGS_LINUX) -o $(OUT_LINUX)
