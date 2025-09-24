@@ -66,6 +66,7 @@ int main()
                 WHITE); // <- the color modification on the sprite
 
         // changes the direciton of the player if they hit the side of the wall
+        // horizontal detection
         if (x + texture.width > WINDOWWIDTH)
         {
             x = WINDOWWIDTH - texture.width;
@@ -77,6 +78,7 @@ int main()
             dx *= -1;
         }
 
+        // vertical detection
         if (y + texture.height > WINDOWHEIGHT)
         {
             y = WINDOWHEIGHT - texture.height;
