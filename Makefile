@@ -8,7 +8,7 @@ FLAGS_LINUX = -lraylib
 TARGET = main.c
 
 # output files
-OUT_LINUX = spin
+OUT_LINUX = ./build/spin
 
 all: 
 	clean linux
