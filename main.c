@@ -13,6 +13,8 @@ int main()
 
     SetTargetFPS(165);
 
+    // SPRITE DATA
+
     Texture texture = LoadTexture("Char Concept with detail.png");
 
     float rotation = 0.0f;
@@ -30,13 +32,20 @@ int main()
         ClearBackground(BLACK);
 
         // Draws the hitbox
+        DrawRectangle(
+                x,
+                y,
+                texture.width,
+                texture.height,
+                WHITE);
+
         // Draws the image
         DrawTexturePro(
                 texture,
                 (Rectangle)
                 {0,0,texture.width,texture.height},
                 (Rectangle)
-                {x += dx, y += dy,
+                {(x += dx) + texture.width / 2, (y += dy) + texture.height / 2,
                 texture.width,
                 texture.height},
                 (Vector2){texture.width / 2,texture.height / 2},
@@ -69,6 +78,7 @@ int main()
         EndDrawing();
     }
 
+    // ENDING THE PROGRAM
     UnloadTexture(texture);
     CloseWindow();
     return 0;
