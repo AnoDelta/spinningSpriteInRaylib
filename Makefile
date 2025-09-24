@@ -8,10 +8,10 @@ FLAGS_LINUX = -lraylib
 TARGET = main.c
 
 # output files
-OUT_LINUX = ./build/spin
+OUT_LINUX = ./build/linux/spin
 
 all: 
-	clean linux
+	linux
 
 linux:
 	$(CC_LINUX) $(TARGET) $(FLAGS_LINUX) -o $(OUT_LINUX)
