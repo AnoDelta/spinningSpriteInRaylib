@@ -4,7 +4,7 @@ CC_WINDOWS = x86_64-w64-mingw32-gcc
 
 # compilation flags
 FLAGS_LINUX = -lraylib
-FLAGS_WINDOWS = -Iraylib/src -Lraylib/build/windows/raylib -lraylib -lopengl32 -lgdi32 -lwinmm
+FLAGS_WINDOWS = -Iraylib/src -Lbuild/windows/raylib -lraylib -lopengl32 -lgdi32 -lwinmm
 
 # files we will be using
 TARGET = main.c
