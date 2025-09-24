@@ -18,3 +18,15 @@ linux:
 
 clean:
 	rm -rf $(OUT_LINUX)
+
+#setup for windows
+	#cd ./build/windows/
+	#cmake ../../raylib -DCMAKE_TOOLCHAIN_FILE=../../mingw-toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+	#make
+	#cd ../..
+
+#setupLinux:
+	#cd ./build/linux/
+	#cmake ../.. -DCMAKE_BUILD_TYPE=Release
+	#make
+	
