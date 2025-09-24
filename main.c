@@ -5,13 +5,15 @@
 #define WINDOWWIDTH 700
 #define WINDOWHEIGHT 500
 
+#define FPS 165
+
 #define SPINSPEED 2.0f
 
 int main()
 {
     InitWindow(WINDOWWIDTH, WINDOWHEIGHT, WINDOWNAME);
 
-    SetTargetFPS(165);
+    SetTargetFPS(FPS);
 
     // SPRITE DATA
 
