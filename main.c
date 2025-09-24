@@ -10,6 +10,9 @@
 
 #define FPS 165
 
+// SPRITE CONTROLS
+
+#define DRAWHITBOX false
 #define SPINSPEED 2.0f
 
 int main()
@@ -37,12 +40,15 @@ int main()
         ClearBackground(BLACK);
 
         // Draws the hitbox
-        DrawRectangle(
+        if (DRAWHITBOX)
+        {
+            DrawRectangle(
                 x,
                 y,
                 texture.width,
                 texture.height,
                 WHITE);
+        }
 
         // Draws the image using raylib
         DrawTexturePro(
