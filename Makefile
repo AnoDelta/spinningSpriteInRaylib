@@ -15,6 +15,10 @@ OUT_WINDOWS = ./build/windows/spin.exe
 
 all: linux windows 
 
+setup:
+	mkdir -p build/linux
+	mkdir -p build/windows
+
 linux:
 	$(CC_LINUX) $(TARGET) $(FLAGS_LINUX) -o $(OUT_LINUX)
 
