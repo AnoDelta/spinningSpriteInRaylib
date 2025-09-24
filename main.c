@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "raylib.h"
 
+// SETTINGS
+// (made to make customiziation easier)
+
 #define WINDOWNAME "your budget animation"
 #define WINDOWWIDTH 700
 #define WINDOWHEIGHT 500
@@ -16,7 +19,6 @@ int main()
     SetTargetFPS(FPS);
 
     // SPRITE DATA
-
     Texture texture = LoadTexture("Char Concept with detail.png");
 
     float rotation = 0.0f;
@@ -27,6 +29,7 @@ int main()
     float dx = 1.0f;
     float dy = 1.0f;
 
+    //MAIN LOOP
     while(!WindowShouldClose())
     {
         BeginDrawing();
@@ -41,18 +44,26 @@ int main()
                 texture.height,
                 WHITE);
 
-        // Draws the image
+        // Draws the image using raylib
         DrawTexturePro(
                 texture,
+
+                // The part of the image we are taking
                 (Rectangle)
                 {0,0,texture.width,texture.height},
+
+                // The place we draw in on the screen
                 (Rectangle)
-                {(x += dx) + texture.width / 2, (y += dy) + texture.height / 2,
+                {(x += dx) + texture.width / 2,
+                (y += dy) + texture.height / 2,
                 texture.width,
                 texture.height},
+
+                // The location where we spin the sprite
                 (Vector2){texture.width / 2,texture.height / 2},
+
                 rotation += SPINSPEED,
-                WHITE);
+                WHITE); // <- the color modification on the sprite
 
         // changes the direciton of the player if they hit the side of the wall
         if (x + texture.width > WINDOWWIDTH)
